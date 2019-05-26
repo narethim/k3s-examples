@@ -1,7 +1,8 @@
 # K3S on x86_64 bare metal machines, or Virtual Machines
 
-master node = x86_64
-worker node = x86_64
+<!-- UL -->
+* master node = x86_64
+* worker node = x86_64
 
 ## Master node install/uninstall
 
