@@ -19,7 +19,7 @@ kubectl label node ubuntu-master kubernetes.io/role=master
 kubectl label node ubuntu-master node-role.kubernetes.io/master=""
 ```
 
-Do not schedule app pod on master node 
+Do not schedule app pod on master node
 
 ```bash
 kubectl taint nodes ubuntu-master node-role.kubernetes.io/master=effect:NoSchedule
@@ -28,9 +28,11 @@ kubectl taint nodes ubuntu-master node-role.kubernetes.io/master=effect:NoSchedu
 ```bash
 sudo cat /var/lib/rancher/k3s/server/node-token
 sudo k3s kubectl get node -o wide
+
+sudo k3s kubectl get all --all-namespaces -o wide
 ```
 
-Label worker node 
+Label worker node
 
 ``` bash
 kubectl label node ubuntu-node1 kubernetes.io/role=node
