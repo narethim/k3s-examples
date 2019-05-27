@@ -27,9 +27,10 @@ kubectl taint nodes ubuntu-master node-role.kubernetes.io/master=effect:NoSchedu
 
 ```bash
 sudo cat /var/lib/rancher/k3s/server/node-token
-sudo k3s kubectl get node -o wide
 
-sudo k3s kubectl get all --all-namespaces -o wide
+kubectl get node -o wide
+
+kubectl get all --all-namespaces -o wide
 ```
 
 Label worker node
